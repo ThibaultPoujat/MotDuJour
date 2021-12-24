@@ -11,7 +11,7 @@ import SwiftUI
 struct MotDuJourApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WordHeaderView()
         }
     }
 }

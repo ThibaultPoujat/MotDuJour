@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		94B6401927761B9E00F8E9F9 /* MotDuJourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6401827761B9E00F8E9F9 /* MotDuJourApp.swift */; };
-		94B6401B27761B9E00F8E9F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6401A27761B9E00F8E9F9 /* ContentView.swift */; };
+		94B6401B27761B9E00F8E9F9 /* WordHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6401A27761B9E00F8E9F9 /* WordHeaderView.swift */; };
 		94B6401D27761B9F00F8E9F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B6401C27761B9F00F8E9F9 /* Assets.xcassets */; };
 		94B6402027761B9F00F8E9F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B6401F27761B9F00F8E9F9 /* Preview Assets.xcassets */; };
 		94B6402A27761B9F00F8E9F9 /* MotDuJourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6402927761B9F00F8E9F9 /* MotDuJourTests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		94B6401527761B9E00F8E9F9 /* MotDuJour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotDuJour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B6401827761B9E00F8E9F9 /* MotDuJourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotDuJourApp.swift; sourceTree = "<group>"; };
-		94B6401A27761B9E00F8E9F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		94B6401A27761B9E00F8E9F9 /* WordHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordHeaderView.swift; sourceTree = "<group>"; };
 		94B6401C27761B9F00F8E9F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94B6401F27761B9F00F8E9F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		94B6402527761B9F00F8E9F9 /* MotDuJourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotDuJourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				94B6401827761B9E00F8E9F9 /* MotDuJourApp.swift */,
-				94B6401A27761B9E00F8E9F9 /* ContentView.swift */,
+				94B6401A27761B9E00F8E9F9 /* WordHeaderView.swift */,
 				94B6401C27761B9F00F8E9F9 /* Assets.xcassets */,
 				94B6401E27761B9F00F8E9F9 /* Preview Content */,
 			);
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94B6401B27761B9E00F8E9F9 /* ContentView.swift in Sources */,
+				94B6401B27761B9E00F8E9F9 /* WordHeaderView.swift in Sources */,
 				94B6401927761B9E00F8E9F9 /* MotDuJourApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +431,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thibault-poujat.MotDuJour";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -460,7 +460,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thibault-poujat.MotDuJour";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
