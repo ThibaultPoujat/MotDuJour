@@ -23,7 +23,7 @@ struct WordDescriptionView: View {
     var body: some View {
         ScrollView {
             VStack {
-                WordHeaderView()
+                WordDescriptionHeaderView(title: WordDescriptionLocalized.title)
                 
                 Spacer()
                 

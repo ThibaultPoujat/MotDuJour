@@ -11,8 +11,10 @@
 		941A904F2779CD270033836F /* WordDescriptionCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941A904E2779CD270033836F /* WordDescriptionCoordinatorView.swift */; };
 		941A90512779CD770033836F /* WordDescriptionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941A90502779CD770033836F /* WordDescriptionCoordinator.swift */; };
 		941A90562779D09E0033836F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 941A90582779D09E0033836F /* Localizable.strings */; };
+		941A905C2779F7730033836F /* WordDescriptionLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941A905B2779F7730033836F /* WordDescriptionLocalized.swift */; };
+		941A905F2779FD760033836F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941A905E2779FD760033836F /* String+Extension.swift */; };
 		94B6401927761B9E00F8E9F9 /* MotDuJourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6401827761B9E00F8E9F9 /* MotDuJourApp.swift */; };
-		94B6401B27761B9E00F8E9F9 /* WordHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6401A27761B9E00F8E9F9 /* WordHeaderView.swift */; };
+		94B6401B27761B9E00F8E9F9 /* WordDescriptionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6401A27761B9E00F8E9F9 /* WordDescriptionHeaderView.swift */; };
 		94B6401D27761B9F00F8E9F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B6401C27761B9F00F8E9F9 /* Assets.xcassets */; };
 		94B6402A27761B9F00F8E9F9 /* MotDuJourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6402927761B9F00F8E9F9 /* MotDuJourTests.swift */; };
 		94B6403427761B9F00F8E9F9 /* MotDuJourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6403327761B9F00F8E9F9 /* MotDuJourUITests.swift */; };
@@ -48,9 +50,11 @@
 		941A90502779CD770033836F /* WordDescriptionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDescriptionCoordinator.swift; sourceTree = "<group>"; };
 		941A90572779D09E0033836F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		941A90592779D0A00033836F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		941A905B2779F7730033836F /* WordDescriptionLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDescriptionLocalized.swift; sourceTree = "<group>"; };
+		941A905E2779FD760033836F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		94B6401527761B9E00F8E9F9 /* MotDuJour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotDuJour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B6401827761B9E00F8E9F9 /* MotDuJourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotDuJourApp.swift; sourceTree = "<group>"; };
-		94B6401A27761B9E00F8E9F9 /* WordHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordHeaderView.swift; sourceTree = "<group>"; };
+		94B6401A27761B9E00F8E9F9 /* WordDescriptionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDescriptionHeaderView.swift; sourceTree = "<group>"; };
 		94B6401C27761B9F00F8E9F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94B6402527761B9F00F8E9F9 /* MotDuJourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotDuJourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B6402927761B9F00F8E9F9 /* MotDuJourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotDuJourTests.swift; sourceTree = "<group>"; };
@@ -99,6 +103,14 @@
 				94B6404D27778ABB00F8E9F9 /* AppCore.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		941A905D2779FD5C0033836F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				941A905E2779FD760033836F /* String+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		94B6400C27761B9E00F8E9F9 = {
@@ -160,8 +172,8 @@
 		94B640432777822800F8E9F9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				941A905D2779FD5C0033836F /* Extension */,
 				94B6404C277786E400F8E9F9 /* WordDescription */,
-				94B6401A27761B9E00F8E9F9 /* WordHeaderView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -179,10 +191,12 @@
 		94B6404C277786E400F8E9F9 /* WordDescription */ = {
 			isa = PBXGroup;
 			children = (
+				94B6401A27761B9E00F8E9F9 /* WordDescriptionHeaderView.swift */,
 				94B640482777842100F8E9F9 /* WordDescriptionCore.swift */,
 				94B6404A277786E000F8E9F9 /* WordDescriptionView.swift */,
 				941A904E2779CD270033836F /* WordDescriptionCoordinatorView.swift */,
 				941A90502779CD770033836F /* WordDescriptionCoordinator.swift */,
+				941A905B2779F7730033836F /* WordDescriptionLocalized.swift */,
 			);
 			path = WordDescription;
 			sourceTree = "<group>";
@@ -335,8 +349,10 @@
 				94B6405127778BBB00F8E9F9 /* Core.swift in Sources */,
 				94B6404B277786E000F8E9F9 /* WordDescriptionView.swift in Sources */,
 				941A904F2779CD270033836F /* WordDescriptionCoordinatorView.swift in Sources */,
+				941A905C2779F7730033836F /* WordDescriptionLocalized.swift in Sources */,
+				941A905F2779FD760033836F /* String+Extension.swift in Sources */,
 				941A90512779CD770033836F /* WordDescriptionCoordinator.swift in Sources */,
-				94B6401B27761B9E00F8E9F9 /* WordHeaderView.swift in Sources */,
+				94B6401B27761B9E00F8E9F9 /* WordDescriptionHeaderView.swift in Sources */,
 				94B640492777842100F8E9F9 /* WordDescriptionCore.swift in Sources */,
 				94B6401927761B9E00F8E9F9 /* MotDuJourApp.swift in Sources */,
 				94B6404E27778ABB00F8E9F9 /* AppCore.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  WordHeaderView.swift
+//  WordDescriptionHeaderView.swift
 //  MotDuJour
 //
 //  Created by Thibault POUJAT on 24/12/2021.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// Funny header view that transform a `String` to emojis letter.
-struct WordHeaderView: View {
+struct WordDescriptionHeaderView: View {
     
     let title: String
     
@@ -30,7 +30,7 @@ struct WordHeaderView: View {
     }
 }
 
-private extension WordHeaderView {
+private extension WordDescriptionHeaderView {
     
     /// Transform a `Character` to it's emoji name equivalent, filled or not depending if it's uppercase.
     /// Example: `A` -> `"a.square.fill"` // `b` -> `"b.square"` //
@@ -43,10 +43,10 @@ private extension WordHeaderView {
 
 private struct WordHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        WordHeaderView(title: "Test One Two Three")
+        WordDescriptionHeaderView(title: "Test One Two Three")
             .preferredColorScheme(.dark)
         
-        WordHeaderView(title: "Test One Two Three")
+        WordDescriptionHeaderView(title: "Test One Two Three")
             .preferredColorScheme(.light)
     }
 }
