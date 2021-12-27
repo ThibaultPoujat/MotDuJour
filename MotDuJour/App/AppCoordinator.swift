@@ -10,18 +10,23 @@ import Combine
 
 import ComposableArchitecture
 
+enum AppTab {
+    case wordDescription
+}
 /// Top most level coordinator of the application
-class AppCoordinator {
+class AppCoordinator: ObservableObject {
+    
+    @Published var tab = AppTab.wordDescription
+    @Published var wordDescriptionCoordinator: WordDescriptionCoordinator
     
     private let store: AppCore.Store
-    private let window: UIWindow
     private var cancellables: Set<AnyCancellable>
     
-    internal init(store: AppCore.Store, window: UIWindow) {
+    internal init(store: AppCore.Store) {
         self.store = store
-        self.window = window
-        
+
         self.cancellables = .init()
+        self.wordDescriptionCoordinator = .init()
     }
     
     func start() {

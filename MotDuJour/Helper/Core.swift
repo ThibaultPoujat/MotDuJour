@@ -23,6 +23,6 @@ public protocol Core {
     /// Typealias simplification for `ComposableArchitecture.Reducer<State, Action, Environment>`
     typealias Reducer = ComposableArchitecture.Reducer<State, Action, Environment>
     
-    /// The feature reducer that will contain all the logic of it's own logic and its dependencies
-    static var featureReducer: Reducer { get }
+    /// The feature reducer that will contain all of it's own logic and its dependencies
+    static var reducer: Reducer { get }
 }
