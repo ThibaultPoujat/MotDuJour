@@ -5,3 +5,6 @@
   Created by Thibault POUJAT on 27/12/2021.
   
 */
+
+"word_description_tab_label" = "Mot";
+"word_description_header_title" = "Word Of The Day";
