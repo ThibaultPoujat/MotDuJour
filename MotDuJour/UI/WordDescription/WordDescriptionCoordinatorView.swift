@@ -12,6 +12,6 @@ struct WordDescriptionCoordinatorView: View {
     @ObservedObject var coordinator: WordDescriptionCoordinator
     
     var body: some View {
-        WordHeaderView()
+        WordDescriptionView(store: coordinator.store)
     }
 }

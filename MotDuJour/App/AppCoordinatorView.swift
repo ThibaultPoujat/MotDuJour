@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct AppCoordinatorView: View {
+    
     // MARK: Stored Properties
     @ObservedObject var coordinator: AppCoordinator
     
     var body: some View {
-        TabView(selection: $coordinator.tab) {
+        TabView(selection: $coordinator.currentTab) {
             TabView {
                 WordDescriptionCoordinatorView(coordinator: coordinator.wordDescriptionCoordinator)
-                    .tabItem { Label("Home", systemImage: "house.fill") }
+                    .tabItem {
+                        Label(WordDescriptionLocalized.tabLabel, systemImage: "house.fill")
+                    }
                     .tag(AppTab.wordDescription)
             }
         }
