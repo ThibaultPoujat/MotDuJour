@@ -9,29 +9,34 @@ import SwiftUI
 import ComposableArchitecture
 
 struct WordDescriptionView: View {
-
+    
     typealias ViewStore = ComposableArchitecture.ViewStore<ViewState, ViewAction>
     
     enum ViewAction: Equatable {
         case onAppear
     }
     
-    struct ViewState: Equatable { }
+    struct ViewState: Equatable {
+        var wordName: String
+        var wordDefinition: String
+    }
     
     let store: WordDescriptionCore.Store
     
     var body: some View {
         ScrollView {
-            VStack {
-                WordDescriptionHeaderView(title: WordDescriptionLocalized.title)
-                
-                Spacer()
-                
-                Text("Mot a définir")
-                
-                Spacer()
-                
-                Text("Définition")
+            WithViewStore(self.store) { viewStore in
+                VStack {
+                    WordDescriptionHeaderView(title: WordDescriptionLocalized.title)
+                    
+                    Spacer()
+                    
+                    Text(viewStore.state.view.wordName)
+                    
+                    Spacer()
+                    
+                    Text(viewStore.state.view.wordDefinition)
+                }
             }
         }
     }
@@ -39,7 +44,8 @@ struct WordDescriptionView: View {
 
 extension WordDescriptionCore.State {
     var view: WordDescriptionView.ViewState {
-        .init()
+        .init(wordName: word?.name ?? "Placeholder",
+              wordDefinition: word?.definition ?? "Placeholder")
     }
 }
 
