@@ -8,8 +8,9 @@
 import ComposableArchitecture
 
 public struct WordDescriptionCore: Core {
+    
     public struct State: Equatable {
-        
+        var word: Word?
         static func initial() -> Self {
             .init()
         }
